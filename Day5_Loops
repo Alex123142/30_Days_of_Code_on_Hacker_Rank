@@ -1,0 +1,4 @@
+n = int(input().strip())
+for i in range(1,11):
+    print('{c} x {a} = {b}'.\
+    format(a=i,b=n*i,c=n))
