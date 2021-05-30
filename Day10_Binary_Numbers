@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    n = int(input().strip())
+    binary_list =[]
+    while n!=0:
+        binary_list.append(n%2)
+        n=int(n/2)
+    
+    count=0
+    count_max=0
+    for i in range(len(binary_list)):
+        if binary_list[i]==1:
+            count+=1
+        elif count > count_max:
+            count_max = count
+            count=0
+        else:
+            count=0
+            #checking the last case
+        if i == len(binary_list)-1:
+            if count > count_max:
+                count_max = count
+    print(count_max)
