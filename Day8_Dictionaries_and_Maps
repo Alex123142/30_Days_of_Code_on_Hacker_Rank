@@ -1,0 +1,15 @@
+phone_book_list = []
+phone_book_dict = {}
+for i in range(int(input())):
+    phone_book_list.append(input())
+for j in range(len(phone_book_list)):
+    phone_book_dict.update({phone_book_list[j].split()[0]:phone_book_list[j].split()[1]})
+while True:
+    try:
+        name = input()
+        if name in phone_book_dict:
+            print(f'{name}={phone_book_dict[name]}')
+        else:
+            print('Not found')
+    except EOFError:
+        break;
